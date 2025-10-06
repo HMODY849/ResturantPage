@@ -18,10 +18,14 @@ plugins: [
       template: './src/templet.html',
     }),
   ],
+   module: {
+    rules: [
+      {
+        test: /\.css$/i,
+        use: ["style-loader", "css-loader"],
+        test: /\.html$/i,
+    loader: "html-loader",
+      },
+    ],
+  },
 }
-// module.exports ={
-//     devServer:{
-//         port: 8080,
-//         open: true,
-//     }
-// }
