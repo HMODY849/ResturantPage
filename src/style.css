@@ -77,7 +77,6 @@ img{
 } 
 .menu-item img{
     width: 200px;
-    height: 220px;
 }
 .menuMain{
     display: flex;
@@ -85,4 +84,8 @@ img{
     justify-self: center;
     text-align: center;
     gap: 1em;
+}
+footer{
+    margin: 10px;
+    text-align: center;
 }
