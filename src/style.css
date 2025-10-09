@@ -11,25 +11,37 @@ body {
     flex-direction: row;
     justify-content: space-between;
     background-color: silver;
-
 }
 
 .p1{
     width: 100px;
     padding-left: 20px;
 }
-
+.rightside{
+    display: flex;
+    gap: 1em;
+}
+.panda{
+    margin: 30px;
+    color: black;
+}
 .nav{
     display: flex;
     gap: 1em;
 }
 .nav button{
+    font-weight: bolder;
     width: 100px;
     height: 50px;
     margin-top: 25px;
     margin-right: 20px;
     border: 0px;
     border-radius: 12px;
+    cursor: pointer;
+}
+.nav button:hover{
+    background-color: #1E2022;
+    color: white;
 }
 
 img{
@@ -42,6 +54,7 @@ img{
     flex-direction: column;
     justify-self: center;
     margin-top: 50px;
+    gap:2em;
 }
 
 .about{
@@ -66,16 +79,23 @@ img{
     justify-self: center;
     text-align: center;
     gap: 1em;
-    margin-top: 20px;
 }
 .menu-item{
-    background-color: black;
+    background-color: silver;
     padding:20px;
     border-radius: 18px;
 }
  .menu-item h3,p{
     margin: 5px;
+    color: black;
 } 
+.food{
+    background-color: silver;
+    color: black;
+    border-radius: 12px;
+    padding: 10px;
+    margin-top: 0px;
+}
 .menu-item img{
     width: 200px;
 }
@@ -86,7 +106,37 @@ img{
     text-align: center;
     gap: 1em;
 }
+ul{
+    list-style: none;
+    margin: 0px;
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+}
+ul li{
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    gap: 10px;
+}
+ul li img{
+    width: 50px;
+}
+ul li p{
+    margin: 10px;
+}
+a{
+    text-decoration: none;
+    color: black;
+}
+a:hover{
+    color: white;
+}
 footer{
     margin: 10px;
     text-align: center;
+}
+footer p {
+    color: white;
 }
