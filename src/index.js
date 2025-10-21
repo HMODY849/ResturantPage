@@ -17,20 +17,66 @@ panda.innerHTML=`Panda`
 
 const nav = document.createElement("nav")
 nav.classList.add("nav")
+const menuImgSrc = require("./img/m1.svg")
+const menuImg = document.createElement("img")
+menuImg.src = menuImgSrc
+menuImg.classList.add("noneImg")
+nav.appendChild(menuImg)
+
 const button = document.createElement("button")
 button.innerText = "تواصل";
 button.id="b1"
+button.classList.add("none");
 father.appendChild(nav)
 nav.appendChild(button)
 const button2 = document.createElement("button")
 button2.innerHTML="قائمة الطعام";
 nav.appendChild(button2);
 button2.id="b2"
+button2.classList.add("none");
 const button3 = document.createElement("button")
 button3.innerHTML="رئيسية";
 nav.appendChild(button3);
 button3.id="b3"
+button3.classList.add("none");
+const humMenu = document.createElement("div");
+humMenu.classList.add("none")
+menuImg.addEventListener("click", function () {
+    if (window.innerWidth >= 768) return;
+  const isOpen = humMenu.classList.contains("humMenu");
 
+  if (isOpen) {
+    humMenu.classList.remove("humMenu");
+    humMenu.classList.add("none");
+
+    nav.appendChild(button);
+    nav.appendChild(button2);
+    nav.appendChild(button3);
+
+    button.classList.add("none");
+    button2.classList.add("none");
+    button3.classList.add("none");
+  } else {
+
+    humMenu.classList.add("humMenu");
+    humMenu.classList.remove("none");
+
+    humMenu.appendChild(button);
+    humMenu.appendChild(button2);
+    humMenu.appendChild(button3);
+
+    button.classList.remove("none");
+    button2.classList.remove("none");
+    button3.classList.remove("none");
+
+    button.classList.add("btn");
+    button2.classList.add("btn");
+    button3.classList.add("btn");
+  }
+
+  // تأكد من إضافة humMenu إلى الصفحة
+  nav.appendChild(humMenu);
+});
 const Home = document.getElementById("b3")
 const Menu = document.getElementById("b2")
 const Contant = document.getElementById("b1")
@@ -38,6 +84,8 @@ const Contant = document.getElementById("b1")
 window.addEventListener("DOMContentLoaded",home)
 function home(){
 father2.innerHTML=``
+humMenu.classList.remove("humMenu");
+humMenu.classList.add("none");
 const section1 = document.createElement("section");
 father2.appendChild(section1);
 section1.classList.add("about")
@@ -96,8 +144,11 @@ footer.appendChild(footerText)
 footerText.innerHTML=`© 2025 مطعم باندا. جميع الحقوق محفوظة.`
 }
 Home.addEventListener("click",home)
+
 function menu (){
 father2.innerHTML=``
+humMenu.classList.remove("humMenu");
+humMenu.classList.add("none");
 const section2 = document.createElement("section")
 father2.appendChild(section2)
 section2.classList.add("menu")
@@ -174,8 +225,11 @@ footer.appendChild(footerText)
 footerText.innerHTML=`© 2025 مطعم باندا. جميع الحقوق محفوظة.`
 }
 Menu.addEventListener("click",menu)
+
  function contant(){
     father2.innerHTML=``;
+    humMenu.classList.remove("humMenu");
+    humMenu.classList.add("none");
     const section1 = document.createElement("section");
     father2.appendChild(section1);
     section1.classList.add("about");
