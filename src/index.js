@@ -249,7 +249,7 @@ Menu.addEventListener("click",menu)
     way1.innerHTML=`<p><a href="">مطعم باندا</a></p>`
     way2.innerHTML=`<p><a href="">Panda_849</a></p>`
     way3.innerHTML=`<p><a href="">panda439</a></p>`
-    way4.innerHTML=`<p><a href="tel:0977487439">0977487439</a></p>`
+    way4.innerHTML=`<p><a href="tel:0992097439">0977487439</a></p>`
     const facebook = require("./img/facebook.png");
     const insta = require("./img/insta.png");
     const whats = require("./img/what.png");
